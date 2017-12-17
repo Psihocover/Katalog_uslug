@@ -67,4 +67,7 @@ include ("head.inc.php");
 
 // подключаем меню
 include ("menu.inc.php");
+
+// подключаем подвал сайта
+include ("foot.inc.php"); 
 ?>
