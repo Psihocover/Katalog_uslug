@@ -25,3 +25,13 @@
 </div>
 <!-- end header -->
 <!-- star menu -->
+<div id="menu">
+  <ul>
+    <li <? echo ($_SERVER['SCRIPT_NAME'] == "/index.php") ? " class=current_page_item " : "" ; ?>> <a href="http://<?=$_SERVER['HTTP_HOST']."/".$dir?>">Главная</a></li>
+    
+  </ul>
+</div>
+<!-- end menu -->
+<br>
+<!-- start page -->
+<div id="page">
