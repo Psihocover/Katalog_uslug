@@ -14,6 +14,14 @@
   </div>
   <div id="rss"> <br>
   </div>
+  <div id="search">
+    <form id="searchform" method=post action="http://<?=$_SERVER['HTTP_HOST'];?>/search/">
+      <fieldset>
+      <input type=text size=26 id="s" name=search_word value="Поиск &rarr;" onBlur="if (this.value=='') {this.value='Поиск &rarr;';}" onClick="if (this.value=='Поиск &rarr;') {this.value='';}">
+      <input type=submit id="x">
+      </fieldset>
+    </form>
+  </div>
 </div>
 <!-- end header -->
 <!-- star menu -->
