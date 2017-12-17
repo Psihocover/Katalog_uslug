@@ -28,7 +28,7 @@
 <div id="menu">
   <ul>
     <li <? echo ($_SERVER['SCRIPT_NAME'] == "/index.php") ? " class=current_page_item " : "" ; ?>> <a href="http://<?=$_SERVER['HTTP_HOST']."/".$dir?>">Главная</a></li>
-    
+    <li <? echo ($_SERVER['SCRIPT_NAME'] == "/scat.php") ? " class=current_page_item " : "" ; ?>> <a href="http://<?=$_SERVER['HTTP_HOST']."/".$dir?>cat/">Каталог услуг</a></li>
   </ul>
 </div>
 <!-- end menu -->
