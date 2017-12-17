@@ -4,6 +4,19 @@
   <ul>
     <li id="categories">
       <h2>Категории</h2>
+      <ul>
+        <?
+		// выводим меню
+		$categories = mysql_query("SELECT * FROM jic_category 
+		WHERE root_cat = 0");
+		while($category = mysql_fetch_array($categories)) 
+		{
+			$sub = 1;
+			echo "<li><strong>".$category['name_cat']."</strong></li>";
+			subcategory($category['cat_id'], $sub);
+		}
+		?>
+      </ul>
     </li>
     <li>
       <h2>Наши контакты</h2>
