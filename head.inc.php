@@ -15,3 +15,5 @@
   <div id="rss"> <br>
   </div>
 </div>
+<!-- end header -->
+<!-- star menu -->
