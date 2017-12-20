@@ -1,0 +1,33 @@
+ErrorDocument 401 http://kurs/error.php 
+ErrorDocument 403 http://kurs/error.php 
+ErrorDocument 404 http://kurs/error.php 
+ErrorDocument 500 http://kurs/error.php 
+php_flag display_errors off
+
+RewriteEngine on 
+RewriteBase / 
+
+RewriteRule ^administrator/?$ sadmin.php 
+RewriteRule images/code.gif /antispam.php
+RewriteRule ^admin/([A-Za-z]+).php$ /error.php 
+RewriteRule ^design/([A-Za-z]+).php$ /error.php 
+RewriteRule ^map/?$ smap.php
+RewriteRule ^contacts/?$ scontacts.php
+RewriteRule ^search/?$ ssearch.php
+RewriteRule ^about/?$ sabout.php
+RewriteRule ^cat/?$ scat.php
+RewriteRule ^cat/([0-9]+)/?$ scat.php?id_cat=$1
+RewriteRule ^cat/([0-9]+)/([0-9]+)/?$ scat.php?id_cat=$1&id_item=$2
+RewriteRule ^cat/([0-9]+)/page/([0-9]+)/?$ scat.php?id_cat=$1&page=$2
+RewriteRule ^admin/logout/?$ sadmin.php?action=logout 
+RewriteRule ^admin/profile/?$ sadmin.php?action=profile 
+RewriteRule ^admin/profile/edit/?$ sadmin.php?action=profile&op=edit
+RewriteRule ^admin/cat/?$ sadmin.php?action=cat 
+RewriteRule ^admin/cat/([0-9]+)/edit_category/?$ sadmin.php?action=cat&op=edit_category&id_cat=$1
+RewriteRule ^admin/cat/([0-9]+)/drop_category/?$ sadmin.php?action=cat&op=drop_category&id_cat=$1
+RewriteRule ^admin/cat/add_category/?$ sadmin.php?action=cat&op=add_category
+RewriteRule ^admin/cat/([0-9]+)/?$ sadmin.php?action=cat&id_cat=$1
+RewriteRule ^admin/cat/add_item/?$ sadmin.php?action=cat&op=add_item
+RewriteRule ^admin/cat/([0-9]+)/page/([0-9]+)/?$ sadmin.php?action=cat&id_cat=$1&page=$2
+RewriteRule ^admin/cat/([0-9]+)/([0-9]+)/edit_item/?$ sadmin.php?action=cat&id_cat=$1&id_item=$2&op=edit_item
+RewriteRule ^admin/cat/([0-9]+)/([0-9]+)/drop_item/?$ sadmin.php?action=cat&id_cat=$1&id_item=$2&op=drop_item
